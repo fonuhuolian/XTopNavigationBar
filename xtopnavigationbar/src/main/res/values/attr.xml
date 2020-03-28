@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="XTopNavigationBar">
+
+        <!--TopBar样式-->
+        <attr name="xBar_style" format="enum">
+            <enum name="titleLeft" value="1" />
+            <enum name="titleMiddle" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+</resources>

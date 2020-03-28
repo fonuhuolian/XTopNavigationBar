@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x_top_bar_height"
+    android:orientation="horizontal"
+    android:background="#3F51B5">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/x_temp_back" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16dp"
+        tools:text="我的资料" />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/searchLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:layout_marginTop="6dp"-->
+<!--        android:layout_marginBottom="6dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:background="@drawable/x_top_bar_serach_bg"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="16dp"-->
+<!--        android:visibility="gone">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/searchKey"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@null"-->
+<!--            android:drawableLeft="@drawable/x_top_bar_search"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:textColor="#717376"-->
+<!--            android:textSize="13dp"-->
+<!--            tools:hint="石家庄" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/x_temp_close" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/x_temp_close" />-->
+
+<!--    </LinearLayout>-->
+
+
+    <TextView
+        android:id="@+id/x_right_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:textSize="14dp"
+        tools:text="发布公告" />
+
+    <TextView
+        android:id="@+id/x_right_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:textSize="14dp"
+        tools:text="发布公告" />
+
+    <TextView
+        android:id="@+id/x_right_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:textSize="14dp"
+        tools:text="发布公告" />
+</LinearLayout>
