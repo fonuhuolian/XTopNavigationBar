@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:xBar_style="titleMiddle"
+        app:xBar_style="titleLeft"
+        app:xBar_right_btn_show="left|right"
         android:layout_gravity="center" />
 
 </FrameLayout>

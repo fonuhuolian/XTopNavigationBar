@@ -10,6 +10,12 @@
             <enum name="titleMiddle" value="2" />
         </attr>
 
+        <attr name="xBar_right_btn_show" format="flags">
+            <flag name="left" value="1" />
+            <flag name="middle" value="10" />
+            <flag name="right" value="100" />
+        </attr>
+
     </declare-styleable>
 
 </resources>
