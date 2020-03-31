@@ -26,7 +26,7 @@ import android.widget.TextView;
 public class XTopNavigationBar extends FrameLayout {
 
     // 是否支持清除和输入
-    private boolean supportWriteAndClear;
+    private int supportWriteAndClear;
     // 是否有正确的搜索框右侧按钮
     private boolean isHasSearchLayoutRightIcon;
 
@@ -41,7 +41,6 @@ public class XTopNavigationBar extends FrameLayout {
 
     private ImageView xBack;
     private TextView xTitle;
-    private LinearLayout bg;
 
 
     public XTopNavigationBar(@NonNull Context context) {
@@ -61,8 +60,6 @@ public class XTopNavigationBar extends FrameLayout {
 
         TypedArray array = getContext().obtainStyledAttributes(attrs, R.styleable.XTopNavigationBar, defStyle, 0);
         LayoutInflater.from(getContext()).inflate(R.layout.widget_x_top_bar, this, true);
-
-        bg = ((LinearLayout) findViewById(R.id.xBg));
 
         Drawable bg = array.getDrawable(R.styleable.XTopNavigationBar_xBar_background);
         setBarBackground(bg);
@@ -144,7 +141,7 @@ public class XTopNavigationBar extends FrameLayout {
         setSearchEditTextColor(editColor);
 
         // 是否支持清除和输入
-        supportWriteAndClear = array.getBoolean(R.styleable.XTopNavigationBar_xBar_searchLayout_edit_support_write_and_clear, true);
+        supportWriteAndClear = array.getInt(R.styleable.XTopNavigationBar_xBar_searchLayout_edit_support_write_and_clear, 1);
         setSearchSupportWriteAndClear(supportWriteAndClear);
 
         int closeResourceId = array.getResourceId(R.styleable.XTopNavigationBar_xBar_searchLayout_edit_clear_src, R.drawable.x_temp_close);
@@ -235,7 +232,7 @@ public class XTopNavigationBar extends FrameLayout {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 String content = charSequence.toString();
 
-                if (supportWriteAndClear) {
+                if (supportWriteAndClear == 1) {
 
                     if (TextUtils.isEmpty(content)) {
                         xClearView.setVisibility(GONE);
@@ -245,6 +242,8 @@ public class XTopNavigationBar extends FrameLayout {
                         xSearchRightIcon.setVisibility(GONE);
                     }
 
+                } else {
+                    xSearchRightIcon.setVisibility(isHasSearchLayoutRightIcon ? VISIBLE : GONE);
                 }
 
                 onXTopBarListener.onTextChanged(content);
@@ -410,6 +409,11 @@ public class XTopNavigationBar extends FrameLayout {
             Log.e("XTopNavigationBar", e.getMessage() + "");
         }
     }
+
+    private void setSearchSupportWriteAndClear(int supportWriteAndClear) {
+        xSearchView.setKeyListener(supportWriteAndClear != 1 ? new TextKeyListener(TextKeyListener.Capitalize.NONE, false) : null);
+    }
+
 
     /**
      * TODO 设置是否支持清除和输入

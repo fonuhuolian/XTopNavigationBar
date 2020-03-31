@@ -63,12 +63,15 @@
         <attr name="xBar_searchLayout_edit_textSize" format="dimension" />
         <!--搜索框输入控件的颜色-->
         <attr name="xBar_searchLayout_edit_textColor" format="color" />
-
-
         <!--搜索框输入控件是否支持输入和显示清除按钮-->
-        <attr name="xBar_searchLayout_edit_support_write_and_clear" format="boolean" />
+        <attr name="xBar_searchLayout_edit_support_write_and_clear" format="enum">
+            <enum name="bothSupport" value="0" />
+            <enum name="noneSupport" value="1" />
+            <enum name="onlyWrite" value="2" />
+        </attr>
         <!--搜索框输入控件的清除按钮图片-->
         <attr name="xBar_searchLayout_edit_clear_src" format="reference" />
+
         <!--搜索框输入控件的最右侧按钮-->
         <attr name="xBar_searchLayout_rightIcon_src" format="reference" />
         <!--搜索框输入清除、右侧的icon的padding-->
