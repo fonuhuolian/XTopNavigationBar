@@ -3,14 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     tools:context=".MainActivity">
 
-    <org.fonuhuolian.xtopnavigationbar.XTopNavigationBar
+    <org.fonuhuolian.xtopnavigationbar.XTopNavigationBar xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:xBar_style="titleLeft"
-        app:xBar_right_btn_show="left|right"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        app:xBar_searchLayout_background="@drawable/x_top_bar_serach_bg"
+        app:xBar_searchLayout_edit_drawableLeft_src="@mipmap/ic_launcher"
+        app:xBar_searchLayout_edit_drawablePadding="6dp"
+        app:xBar_searchLayout_edit_hint="搜索"
+        app:xBar_searchLayout_edit_paddingLeft="20dp"
+        app:xBar_searchLayout_edit_support_write_and_clear="false"
+        app:xBar_searchLayout_margin="5dp"
+        app:xBar_searchLayout_support="true"
+        app:xBar_title_color="@color/colorAccent" />
 
 </FrameLayout>

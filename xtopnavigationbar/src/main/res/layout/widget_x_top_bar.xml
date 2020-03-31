@@ -4,18 +4,18 @@
     android:id="@+id/bg"
     android:layout_width="match_parent"
     android:layout_height="@dimen/x_top_bar_height"
-    android:orientation="horizontal"
-    android:background="#FFEB3B">
+    android:background="#FFEB3B"
+    android:orientation="horizontal">
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/xBack"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:foreground="?android:attr/selectableItemBackground"
         android:src="@drawable/x_temp_back" />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/xTitle"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
@@ -24,7 +24,7 @@
         tools:text="我的资料" />
 
     <LinearLayout
-        android:id="@+id/searchLayout"
+        android:id="@+id/xSearchLayout"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
@@ -35,28 +35,28 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:textColor="@android:color/white"
-        android:textSize="16dp"
-        android:visibility="gone">
+        android:textSize="16dp">
 
         <EditText
-            android:id="@+id/searchKey"
+            android:id="@+id/xSearchView"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
             android:drawableLeft="@drawable/x_top_bar_search"
-            android:gravity="center_vertical"
-            android:textColor="#717376"
+            android:textColor="#3E4343"
             android:textSize="13dp"
             tools:hint="石家庄" />
 
         <ImageView
+            android:id="@+id/xClearView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/x_temp_close" />
 
         <ImageView
+            android:id="@+id/xSearchRightIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/x_temp_close" />
@@ -70,9 +70,9 @@
         android:layout_height="match_parent"
         android:foreground="?android:attr/selectableItemBackground"
         android:gravity="center"
-        android:textSize="14dp"
+        android:text="左边"
         android:textColor="#DA3333"
-        android:text="左边" />
+        android:textSize="14dp" />
 
     <TextView
         android:id="@+id/x_right_btn2"
@@ -80,9 +80,9 @@
         android:layout_height="match_parent"
         android:foreground="?android:attr/selectableItemBackground"
         android:gravity="center"
-        android:textSize="14dp"
+        android:text="中间"
         android:textColor="#1043A6"
-        android:text="中间" />
+        android:textSize="14dp" />
 
     <TextView
         android:id="@+id/x_right_btn3"
@@ -90,7 +90,7 @@
         android:layout_height="match_parent"
         android:foreground="?android:attr/selectableItemBackground"
         android:gravity="center"
-        android:textSize="14dp"
+        android:text="右边"
         android:textColor="#009688"
-        android:text="右边" />
+        android:textSize="14dp" />
 </LinearLayout>

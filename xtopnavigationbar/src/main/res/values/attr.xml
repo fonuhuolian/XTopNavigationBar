@@ -4,17 +4,89 @@
 
     <declare-styleable name="XTopNavigationBar">
 
-        <!--TopBar样式-->
-        <attr name="xBar_style" format="enum">
-            <enum name="titleLeft" value="1" />
-            <enum name="titleMiddle" value="2" />
-        </attr>
-
+        <!--右侧三个按钮的显示-->
         <attr name="xBar_right_btn_show" format="flags">
             <flag name="left" value="1" />
             <flag name="middle" value="10" />
             <flag name="right" value="100" />
         </attr>
+
+        <!--右侧三个按钮的内边距-->
+        <attr name="xBar_right_btn_padding" format="dimension" />
+        <!--右侧三个按钮的字体大小-->
+        <attr name="xBar_right_btn_text_size" format="dimension" />
+        <!--右侧三个按钮的字体颜色-->
+        <attr name="xBar_right_btn_text_color" format="color" />
+
+        <!--右侧三个按钮的第一个文字内容-->
+        <attr name="xBar_right_first_btn_text" format="string" />
+        <!--右侧三个按钮的第二个文字内容-->
+        <attr name="xBar_right_second_btn_text" format="string" />
+        <!--右侧三个按钮的第三个文字内容-->
+        <attr name="xBar_right_third_btn_text" format="string" />
+
+        <!--右侧三个按钮的第一个image-->
+        <attr name="xBar_right_first_btn_image_src" format="reference" />
+        <!--右侧三个按钮的第二个image-->
+        <attr name="xBar_right_second_btn_image_src" format="reference" />
+        <!--右侧三个按钮的第三个image-->
+        <attr name="xBar_right_third_btn_image_src" format="reference" />
+
+
+        <!--搜索框是否支持-->
+        <attr name="xBar_searchLayout_support" format="boolean" />
+        <!--搜索框背景-->
+        <attr name="xBar_searchLayout_background" format="color|reference" />
+        <!--搜索框margin-->
+        <attr name="xBar_searchLayout_margin" format="dimension" />
+        <attr name="xBar_searchLayout_marginTop" format="dimension" />
+        <attr name="xBar_searchLayout_marginBottom" format="dimension" />
+        <attr name="xBar_searchLayout_marginLeft" format="dimension" />
+        <attr name="xBar_searchLayout_marginRight" format="dimension" />
+
+
+        <!--搜索框输入控件的padding-->
+        <attr name="xBar_searchLayout_edit_paddingLeft" format="dimension" />
+        <attr name="xBar_searchLayout_edit_paddingRight" format="dimension" />
+        <!--搜索框输入控件的左侧图标的距离文字距离-->
+        <attr name="xBar_searchLayout_edit_drawablePadding" format="dimension" />
+        <!--搜索框输入控件的左侧图标-->
+        <attr name="xBar_searchLayout_edit_drawableLeft_src" format="reference" />
+        <!--搜索框输入控件的hint-->
+        <attr name="xBar_searchLayout_edit_hint" format="string" />
+        <!--搜索框输入控件的hint颜色-->
+        <attr name="xBar_searchLayout_edit_hintColor" format="color" />
+        <!--搜索框输入控件的字体大小-->
+        <attr name="xBar_searchLayout_edit_textSize" format="dimension" />
+        <!--搜索框输入控件的颜色-->
+        <attr name="xBar_searchLayout_edit_textColor" format="color" />
+
+
+        <!--搜索框输入控件是否支持输入和显示清除按钮-->
+        <attr name="xBar_searchLayout_edit_support_write_and_clear" format="boolean" />
+        <!--搜索框输入控件的清除按钮图片-->
+        <attr name="xBar_searchLayout_edit_clear_src" format="reference" />
+        <!--搜索框输入控件的最右侧按钮-->
+        <attr name="xBar_searchLayout_rightIcon_src" format="reference" />
+        <!--搜索框输入清除、右侧的icon的padding-->
+        <attr name="xBar_searchLayout_icon_padding" format="dimension" />
+
+
+        <!--title颜色-->
+        <attr name="xBar_title_color" format="color" />
+        <!--title字体大小-->
+        <attr name="xBar_title_textSize" format="dimension" />
+        <!--title字体左边距-->
+        <attr name="xBar_title_paddingLeft" format="dimension" />
+        <!--title字体右边距-->
+        <attr name="xBar_title_paddingRight" format="dimension" />
+
+        <!--返回键按钮-->
+        <attr name="xBar_backIcon_src" format="reference" />
+        <!--返回键icon的padding-->
+        <attr name="xBar_backIcon_padding" format="dimension" />
+        <!--返回键icon的是否显示-->
+        <attr name="xBar_backIcon_visibility" format="boolean" />
 
     </declare-styleable>
 
