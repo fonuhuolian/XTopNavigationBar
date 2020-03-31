@@ -185,7 +185,7 @@ public class XTopNavigationBar extends FrameLayout {
     public void setOnXTopBarListener(final OnTopBarListener onXTopBarListener, boolean translucentBars) {
 
         if (translucentBars)
-            TopBarUtil.setPaddingSmart(getContext(), this);
+            TopBarUtil.setPaddingSmart(getContext(), bg);
 
         if (onXTopBarListener == null)
             return;
