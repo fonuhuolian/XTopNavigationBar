@@ -286,7 +286,7 @@ public class XTopNavigationBar extends FrameLayout {
      * @param backVisible 显示？
      */
     public void setBackVisible(boolean backVisible) {
-        xTitle.setVisibility(backVisible ? VISIBLE : GONE);
+        xBack.setVisibility(backVisible ? VISIBLE : GONE);
     }
 
 
@@ -623,6 +623,25 @@ public class XTopNavigationBar extends FrameLayout {
                 xRightBtn3.setText(content);
                 break;
         }
+    }
+
+    /**
+     * TODO 获取右侧三个按钮
+     *
+     * @param rightBtn 哪个按钮
+     */
+    public TextView getRightBtn(RightBtn rightBtn) {
+
+        switch (rightBtn) {
+            case RIGHT_FIRST:
+                return xRightBtn1;
+            case RIGHT_SECOND:
+                return xRightBtn2;
+            case RIGHT_THIRD:
+                return xRightBtn3;
+        }
+
+        return xRightBtn1;
     }
 
     /**

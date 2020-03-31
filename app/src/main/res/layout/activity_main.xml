@@ -9,7 +9,7 @@
     <org.fonuhuolian.xtopnavigationbar.XTopNavigationBar xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/top"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         app:xBar_background="#fff"
         app:xBar_searchLayout_background="@drawable/x_top_bar_serach_bg"
         app:xBar_searchLayout_edit_drawableLeft_src="@mipmap/ic_launcher"
