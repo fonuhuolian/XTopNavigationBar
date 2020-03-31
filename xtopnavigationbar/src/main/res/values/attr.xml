@@ -4,6 +4,9 @@
 
     <declare-styleable name="XTopNavigationBar">
 
+        <!--整体背景-->
+        <attr name="xBar_background" format="color|reference" />
+
         <!--右侧三个按钮的显示-->
         <attr name="xBar_right_btn_show" format="flags">
             <flag name="left" value="1" />

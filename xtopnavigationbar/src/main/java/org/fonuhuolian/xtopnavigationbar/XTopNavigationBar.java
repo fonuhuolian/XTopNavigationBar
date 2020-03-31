@@ -41,6 +41,7 @@ public class XTopNavigationBar extends FrameLayout {
 
     private ImageView xBack;
     private TextView xTitle;
+    private LinearLayout bg;
 
 
     public XTopNavigationBar(@NonNull Context context) {
@@ -60,6 +61,11 @@ public class XTopNavigationBar extends FrameLayout {
 
         TypedArray array = getContext().obtainStyledAttributes(attrs, R.styleable.XTopNavigationBar, defStyle, 0);
         LayoutInflater.from(getContext()).inflate(R.layout.widget_x_top_bar, this, true);
+
+        bg = ((LinearLayout) findViewById(R.id.xBg));
+
+        Drawable bg = array.getDrawable(R.styleable.XTopNavigationBar_xBar_background);
+        setBarBackground(bg);
 
         xRightBtn1 = findViewById(R.id.x_right_btn1);
         xRightBtn2 = findViewById(R.id.x_right_btn2);
@@ -246,6 +252,15 @@ public class XTopNavigationBar extends FrameLayout {
 
             }
         });
+    }
+
+    /**
+     * TODO 设置搜索布局背景
+     *
+     * @param drawable 对应背景
+     */
+    public void setBarBackground(Drawable drawable) {
+        bg.setBackground(drawable);
     }
 
     /**
@@ -492,16 +507,6 @@ public class XTopNavigationBar extends FrameLayout {
      */
     public void setSearchEditViewPadding(int paddingLeft, int PaddingRight) {
         xSearchView.setPadding(paddingLeft, 0, PaddingRight, 0);
-    }
-
-    /**
-     * TODO 设置搜索清除按钮
-     *
-     * @param isSupport 是否支持清除按钮
-     */
-    public void setSearchClearViewSupport(boolean isSupport) {
-
-
     }
 
 
