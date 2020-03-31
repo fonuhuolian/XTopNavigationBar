@@ -83,6 +83,8 @@
         <attr name="xBar_title_paddingLeft" format="dimension" />
         <!--title字体右边距-->
         <attr name="xBar_title_paddingRight" format="dimension" />
+        <!--title文字内容-->
+        <attr name="xBar_title_content" format="string" />
 
         <!--返回键按钮-->
         <attr name="xBar_backIcon_src" format="reference" />

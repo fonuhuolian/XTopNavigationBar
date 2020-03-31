@@ -177,6 +177,9 @@ public class XTopNavigationBar extends FrameLayout {
         int titlePaddingLeft = (int) array.getDimension(R.styleable.XTopNavigationBar_xBar_title_paddingLeft, 0);
         int titlePaddingRight = (int) array.getDimension(R.styleable.XTopNavigationBar_xBar_title_paddingRight, 0);
         setTitlePadding(titlePaddingLeft, titlePaddingRight);
+
+        String titleStr = array.getString(R.styleable.XTopNavigationBar_xBar_title_content);
+        setTitleContent(titleStr);
     }
 
     public void setOnXTopBarListener(final OnTopBarListener onXTopBarListener, boolean translucentBars) {
@@ -287,6 +290,24 @@ public class XTopNavigationBar extends FrameLayout {
      */
     public void setBackVisible(boolean backVisible) {
         xBack.setVisibility(backVisible ? VISIBLE : GONE);
+    }
+
+    /**
+     * TODO 设置title内容
+     *
+     * @param content 提示内容
+     */
+    public void setTitleContent(String content) {
+        xTitle.setText(content);
+    }
+
+    /**
+     * TODO 设置title内容
+     *
+     * @param content 内容
+     */
+    public void setTitleContent(int content) {
+        xTitle.setText(content);
     }
 
 
