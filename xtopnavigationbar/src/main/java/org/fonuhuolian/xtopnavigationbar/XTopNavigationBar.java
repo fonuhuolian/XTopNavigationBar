@@ -537,7 +537,7 @@ public class XTopNavigationBar extends FrameLayout {
      * @param isSupport true 支持
      */
     public void setSupportSearchLayout(boolean isSupport) {
-        xSearchLayout.setVisibility(isSupport ? VISIBLE : GONE);
+        xSearchLayout.setVisibility(isSupport ? VISIBLE : INVISIBLE);
     }
 
     /**
