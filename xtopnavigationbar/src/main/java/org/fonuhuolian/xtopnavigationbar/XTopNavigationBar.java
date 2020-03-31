@@ -3,26 +3,20 @@ package org.fonuhuolian.xtopnavigationbar;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.text.method.KeyListener;
 import android.text.method.TextKeyListener;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -179,7 +173,10 @@ public class XTopNavigationBar extends FrameLayout {
         setTitlePadding(titlePaddingLeft, titlePaddingRight);
     }
 
-    public void setOnXTopBarListener(final OnTopBarListener onXTopBarListener) {
+    public void setOnXTopBarListener(final OnTopBarListener onXTopBarListener, boolean translucentBars) {
+
+        if (translucentBars)
+            TopBarUtil.setPaddingSmart(getContext(), this);
 
         if (onXTopBarListener == null)
             return;
