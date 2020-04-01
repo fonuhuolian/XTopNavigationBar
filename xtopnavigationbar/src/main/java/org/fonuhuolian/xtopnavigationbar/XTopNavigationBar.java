@@ -275,6 +275,11 @@ public class XTopNavigationBar extends FrameLayout {
      */
     public void setBarBackgroundAlpha(float alphaPercent) {
 
+        Drawable background = this.getBackground();
+
+        if (background == null)
+            return;
+
         int alpha = 0;
 
         if (alphaPercent <= 0) {
@@ -284,8 +289,8 @@ public class XTopNavigationBar extends FrameLayout {
         } else {
             alpha = (int) (255 * alphaPercent);
         }
-
-        this.getBackground().mutate().setAlpha(alpha);
+        
+        background.mutate().setAlpha(alpha);
     }
 
     /**
