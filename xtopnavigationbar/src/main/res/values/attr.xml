@@ -6,6 +6,8 @@
 
         <!--整体背景-->
         <attr name="xBar_background" format="color|reference" />
+        <!--背景透明度-->
+        <attr name="xBar_background_alpha" format="fraction"/>
 
         <!--右侧三个按钮的显示-->
         <attr name="xBar_right_btn_show" format="flags">

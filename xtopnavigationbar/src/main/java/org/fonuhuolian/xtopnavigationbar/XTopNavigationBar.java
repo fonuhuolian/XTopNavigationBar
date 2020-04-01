@@ -64,6 +64,9 @@ public class XTopNavigationBar extends FrameLayout {
         Drawable bg = array.getDrawable(R.styleable.XTopNavigationBar_xBar_background);
         setBarBackground(bg);
 
+        float fraction = array.getFraction(R.styleable.XTopNavigationBar_xBar_background_alpha, 1, 1, 1);
+        setBarBackgroundAlpha(fraction);
+
         xRightBtn1 = findViewById(R.id.x_right_btn1);
         xRightBtn2 = findViewById(R.id.x_right_btn2);
         xRightBtn3 = findViewById(R.id.x_right_btn3);
