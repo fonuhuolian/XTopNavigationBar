@@ -266,6 +266,26 @@ public class XTopNavigationBar extends FrameLayout {
     }
 
     /**
+     * TODO 设置搜索布局背景
+     *
+     * @param alphaPercent 透明
+     */
+    public void setBarBackgroundAlpha(float alphaPercent) {
+
+        int alpha = 0;
+
+        if (alphaPercent <= 0) {
+            alpha = 0;
+        } else if (alphaPercent >= 1) {
+            alpha = 255;
+        } else {
+            alpha = (int) (255 * alphaPercent);
+        }
+                
+        this.getBackground().mutate().setAlpha(alpha);
+    }
+
+    /**
      * TODO 获取搜索内容
      */
     public String getSearchWord() {
