@@ -281,8 +281,8 @@ public class XTopNavigationBar extends FrameLayout {
         } else {
             alpha = (int) (255 * alphaPercent);
         }
-                
-        this.getBackground().mutate().setAlpha(alpha);
+
+        this.getBackground().setAlpha(alpha);
     }
 
     /**
