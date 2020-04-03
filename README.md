@@ -65,7 +65,7 @@ topBar.setBarRightBtnsVisibility(false, true, true);
 
 
 // 监听事件
-// boolean translucentBars ture 会拉伸一个状态栏的高度
+// boolean translucentBars ture 会增加一个状态栏高度的padding
 topBar.setOnXTopBarListener(new OnTopBarListener() {
         @Override
         public void onBack(ImageView back) {
@@ -98,6 +98,11 @@ topBar.setOnXTopBarListener(new OnTopBarListener() {
 });
 ```
 
-> 效果
+> 属性展示
 
-![效果](https://github.com/fonuhuolian/XTopNavigationBar/blob/master/app/doc/info.png?raw=true)
+![属性](https://github.com/fonuhuolian/XTopNavigationBar/blob/master/app/doc/info.png?raw=true)
+
+> 感谢scwang90
+```
+透明状态栏转自scwang90
+```
