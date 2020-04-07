@@ -63,11 +63,7 @@ public class XTopNavigationBar extends FrameLayout {
         LayoutInflater.from(getContext()).inflate(R.layout.widget_x_top_bar, this, true);
 
         Drawable bg = array.getDrawable(R.styleable.XTopNavigationBar_xBar_background);
-
-        if (bg == null)
-            setBarBackground(XTopNavigationBarInit.getBackgroundDrawable());
-        else
-            setBarBackground(bg);
+        setBarBackground(bg);
 
         float fraction = array.getFraction(R.styleable.XTopNavigationBar_xBar_background_alpha, 1, 1, 1);
         setBarBackgroundAlpha(fraction);
@@ -80,13 +76,13 @@ public class XTopNavigationBar extends FrameLayout {
         setBarRightBtnsVisibility(flagValue);
 
 
-        float rightBtnPadding = array.getDimension(R.styleable.XTopNavigationBar_xBar_right_btn_padding, XTopNavigationBarInit.getBarRightBtnsPadding());
+        float rightBtnPadding = array.getDimension(R.styleable.XTopNavigationBar_xBar_right_btn_padding, 0);
         setBarRightBtnsPadding((int) rightBtnPadding);
 
-        float rightBtnTextSize = array.getDimension(R.styleable.XTopNavigationBar_xBar_right_btn_text_size, XTopNavigationBarInit.getBarRightBtnsTextSize());
+        float rightBtnTextSize = array.getDimension(R.styleable.XTopNavigationBar_xBar_right_btn_text_size, dip2px(14));
         setBarRightBtnsTextSize(rightBtnTextSize);
 
-        int color = array.getColor(R.styleable.XTopNavigationBar_xBar_right_btn_text_color, XTopNavigationBarInit.getBarRightBtnsTextColor());
+        int color = array.getColor(R.styleable.XTopNavigationBar_xBar_right_btn_text_color, Color.parseColor("#000000"));
         setBarRightBtnsTextColor(color);
 
         String text1 = array.getString(R.styleable.XTopNavigationBar_xBar_right_first_btn_text);
@@ -164,19 +160,19 @@ public class XTopNavigationBar extends FrameLayout {
         xBack = ((ImageView) findViewById(R.id.xBack));
         xTitle = ((TextView) findViewById(R.id.xTitle));
 
-        int backIconPadding = (int) array.getDimension(R.styleable.XTopNavigationBar_xBar_backIcon_padding, XTopNavigationBarInit.getBackIconPadding());
+        int backIconPadding = (int) array.getDimension(R.styleable.XTopNavigationBar_xBar_backIcon_padding, 0);
         setBarBackIconPadding(backIconPadding);
 
-        int backResourceId = array.getResourceId(R.styleable.XTopNavigationBar_xBar_backIcon_src, XTopNavigationBarInit.getBackResId());
+        int backResourceId = array.getResourceId(R.styleable.XTopNavigationBar_xBar_backIcon_src, 0);
         seBarBackView(backResourceId);
 
-        boolean backVisible = array.getBoolean(R.styleable.XTopNavigationBar_xBar_backIcon_visibility, XTopNavigationBarInit.getBackVisible());
+        boolean backVisible = array.getBoolean(R.styleable.XTopNavigationBar_xBar_backIcon_visibility, true);
         setBarBackVisible(backVisible);
 
-        int titleColor = array.getColor(R.styleable.XTopNavigationBar_xBar_title_color, XTopNavigationBarInit.getTitleColor());
+        int titleColor = array.getColor(R.styleable.XTopNavigationBar_xBar_title_color, Color.parseColor("#000000"));
         setBarTitleColor(titleColor);
 
-        float titleSize = array.getDimension(R.styleable.XTopNavigationBar_xBar_title_textSize, XTopNavigationBarInit.getTitleSize());
+        float titleSize = array.getDimension(R.styleable.XTopNavigationBar_xBar_title_textSize, dip2px(16));
         seBarTitleTextSize(titleSize);
 
         int titlePaddingLeft = (int) array.getDimension(R.styleable.XTopNavigationBar_xBar_title_paddingLeft, 0);

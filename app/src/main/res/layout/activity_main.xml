@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#092432"
     tools:context=".MainActivity">
 
-    <org.fonuhuolian.xtopnavigationbar.XTopNavigationBar xmlns:app="http://schemas.android.com/apk/res-auto"
+    <org.fonuhuolian.xtopnavigationbar.XTopNavigationBar
         android:id="@+id/top"
+        style="@style/MyStyle"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_gravity="center"
-        app:xBar_background="#fff"
         app:xBar_right_btn_show="left|middle|right"
         app:xBar_right_first_btn_image_src="@mipmap/yi"
         app:xBar_right_second_btn_image_src="@mipmap/er"

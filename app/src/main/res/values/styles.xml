@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyStyle">
+        <item name="xBar_background">@mipmap/ic_launcher</item>
+    </style>
+
 </resources>

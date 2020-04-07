@@ -16,7 +16,7 @@ allprojects {
 ```
 `module build.gradle `
 ```
-implementation 'com.github.fonuhuolian:XTopNavigationBar:1.0.5'
+implementation 'com.github.fonuhuolian:XTopNavigationBar:1.0.6'
 ```
 
 > 混淆
@@ -29,13 +29,11 @@ implementation 'com.github.fonuhuolian:XTopNavigationBar:1.0.5'
 ```
 基本都是以xBar_为自定义属性和方法
 ```
-> 全局初始化(默认的样式)
+> 可抽取基础样式进行引用
 ```
-XTopNavigationBarInit.initialize(this)
-        .addBarBackgroundDrawable(R.drawable.base_bg)
-        .addBarBackView(R.mipmap.back)
-        .addBarTitleColor("#ffffff")
-        .addBarTitleTextSize(45);
+<style name="MyStyle">
+    <item name="xBar_background">@mipmap/ic_launcher</item>
+</style>
 ```
 
 > xml
@@ -45,6 +43,7 @@ XTopNavigationBarInit.initialize(this)
     android:id="@+id/top_bar"
     android:layout_width="match_parent"
     android:layout_height="46dp"
+    style="@style/MyStyle"
     app:xBar_background_alpha="0%"
     app:xBar_right_second_btn_image_src="@mipmap/guanli"
     app:xBar_right_third_btn_image_src="@mipmap/fx"
