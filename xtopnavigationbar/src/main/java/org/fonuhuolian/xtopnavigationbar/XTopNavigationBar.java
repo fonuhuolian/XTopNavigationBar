@@ -151,8 +151,8 @@ public class XTopNavigationBar extends FrameLayout {
         int closeResourceId = array.getResourceId(R.styleable.XTopNavigationBar_xBar_searchLayout_edit_clear_src, R.drawable.x_temp_close);
         setBarSearchEditClearView(closeResourceId);
 
-        int serachRightIconId = array.getResourceId(R.styleable.XTopNavigationBar_xBar_searchLayout_rightIcon_src, 0);
-        setBarSearchLayoutRightIcon(serachRightIconId);
+        int searchRightIconId = array.getResourceId(R.styleable.XTopNavigationBar_xBar_searchLayout_rightIcon_src, 0);
+        setBarSearchLayoutRightIcon(searchRightIconId);
 
         int searchIconPadding = (int) array.getDimension(R.styleable.XTopNavigationBar_xBar_searchLayout_icon_padding, 0);
         setBarSearchIconPadding(searchIconPadding);
@@ -226,6 +226,22 @@ public class XTopNavigationBar extends FrameLayout {
             }
         });
 
+
+        if (TextUtils.isEmpty(xSearchView.getText().toString())) {
+            xClearView.setVisibility(GONE);
+            xSearchRightIcon.setVisibility(isHasSearchLayoutRightIcon ? VISIBLE : GONE);
+        } else {
+            xClearView.setVisibility(VISIBLE);
+            xSearchRightIcon.setVisibility(GONE);
+        }
+
+        xClearView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                xSearchView.setText("");
+            }
+        });
+
         xSearchView.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -236,7 +252,7 @@ public class XTopNavigationBar extends FrameLayout {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 String content = charSequence.toString();
 
-                if (supportWriteAndClear == 1) {
+                if (supportWriteAndClear != 1) {
 
                     if (TextUtils.isEmpty(content)) {
                         xClearView.setVisibility(GONE);
@@ -331,6 +347,13 @@ public class XTopNavigationBar extends FrameLayout {
      */
     public String getBarSearchWord() {
         return xSearchView.getText().toString();
+    }
+
+    /**
+     * TODO 获取搜索的提示内容
+     */
+    public String getBarSearchHindWord() {
+        return xSearchView.getHint().toString();
     }
 
     /**
