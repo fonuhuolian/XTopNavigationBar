@@ -16,7 +16,7 @@ allprojects {
 ```
 `module build.gradle `
 ```
-implementation 'com.github.fonuhuolian:XTopNavigationBar:1.0.7'
+implementation 'com.github.fonuhuolian:XTopNavigationBar:1.0.8'
 ```
 
 > 混淆

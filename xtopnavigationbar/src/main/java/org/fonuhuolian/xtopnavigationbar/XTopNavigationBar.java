@@ -164,7 +164,7 @@ public class XTopNavigationBar extends FrameLayout {
         setBarBackIconPadding(backIconPadding);
 
         int backResourceId = array.getResourceId(R.styleable.XTopNavigationBar_xBar_backIcon_src, 0);
-        seBarBackView(backResourceId);
+        setBarBackView(backResourceId);
 
         boolean backVisible = array.getBoolean(R.styleable.XTopNavigationBar_xBar_backIcon_visibility, true);
         setBarBackVisible(backVisible);
@@ -426,7 +426,7 @@ public class XTopNavigationBar extends FrameLayout {
      *
      * @param resId 资源id
      */
-    public void seBarBackView(@DrawableRes int resId) {
+    public void setBarBackView(@DrawableRes int resId) {
 
         Drawable drawable_n = null;
 
