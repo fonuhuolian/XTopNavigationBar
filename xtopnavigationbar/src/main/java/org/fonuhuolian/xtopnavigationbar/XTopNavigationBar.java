@@ -160,6 +160,8 @@ public class XTopNavigationBar extends FrameLayout {
         xBack = ((ImageView) findViewById(R.id.xBack));
         xTitle = ((TextView) findViewById(R.id.xTitle));
 
+        xTitle.setSelected(true);
+
         int backIconPadding = (int) array.getDimension(R.styleable.XTopNavigationBar_xBar_backIcon_padding, 0);
         setBarBackIconPadding(backIconPadding);
 

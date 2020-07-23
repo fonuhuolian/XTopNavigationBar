@@ -16,7 +16,10 @@
         android:id="@+id/xTitle"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:ellipsize="marquee"
         android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="16dp"
         tools:text="我的资料" />
